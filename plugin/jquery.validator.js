@@ -9,7 +9,7 @@
 
 			return this.each(function (){
 
-				var isCorrect = true;
+				var isCorrect = false;
 				var val = $(this).val();
 				var pat;
 
@@ -17,8 +17,8 @@
 					pat = new RegExp(options.patt);
 					console.log("only patt");
 					}
-					if(!pat.test(val)){
-						isCorrect = false;
+					if(pat.test(val)){
+						isCorrect = true;
 					}
 				
 				if(isCorrect){
@@ -32,7 +32,7 @@
 
 		textExpression : function(options) {
 			
-				var isCorrect = true;
+				var isCorrect = false;
 
 				var settings = $.extend({
 					"patt": "[A-Za-z]\\w+"}, options);
@@ -40,7 +40,7 @@
 		},
 		emailExpression: function(options) {
 			//console.log("emailExpression: " + options);
-			var isCorrect = true;
+			var isCorrect = false;
 
 			var settings = $.extend({
 				"patt": "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\." +
@@ -54,6 +54,43 @@
 
 		passwdExpression: function(options){
 
+      return this.each(function () {
+        var isCorrect = true;
+        var val = $(this).val();
+        var pat;
+
+        if(options.small){
+          pat = new RegExp("[a-z]");
+          if(!pat.test(val)){
+            isCorrect = false;
+          }
+        }
+        if(options.big){
+          pat = new RegExp("[A-Z]");
+          if(!pat.test(val)){
+            isCorrect = false;
+          }
+        }
+        if(options.digit){
+          pat = new RegExp("\\d");
+          if(!pat.test(val)){
+            isCorrect = false;
+          }
+        }
+        if(options.special){
+          pat = new RegExp("[\\!\\@\\#\\$\\%\\^\\&\\*\\(\\)\\_\\+\\-\\=]");
+          if(!pat.test(val)){
+            isCorrect = false;
+          }
+        }
+
+        if(isCorrect){
+          options.correct(this);
+        } else {
+          options.uncorrect(this);
+        }
+      
+      });
 		}
 
 	};
