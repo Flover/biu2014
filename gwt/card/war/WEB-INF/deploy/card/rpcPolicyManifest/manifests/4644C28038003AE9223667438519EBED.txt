@@ -1,0 +1,2 @@
+serviceClass: com.example.card.client.AuthService
+path: 9041886D23D34E327D701320A4A0D847.gwt.rpc

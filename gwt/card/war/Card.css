@@ -1,0 +1,51 @@
+.wrapper {
+	width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#textHolder, #textEditHolder{
+	margin-left: 40px;
+	width: 400px;
+	height: 500px;
+	border-style: ridge;
+}
+#loginBox, #loggedinBox {
+	position:absolute;
+	left:20px;
+}
+
+#loginTbHolder, #passwdTbHolder , #sigInBtnHolder {
+	display: inline-block;
+}
+
+#loginTbHolder , #passwdTbHolder  {
+	height: 18px; 
+}
+
+.hidden {
+	display: none;
+	margin-left: 40px
+}
+
+#saveBtnHolder {
+	margin-top: 10px;
+}
+
+#nameHolder, #descrHolder, #offerHolder, #contactHolder, #nameTextBox, #descrTextBox, #offerTextBox, #contactTextBox, #saveBtnHolder{
+	margin-left: 10px;
+}
+
+#descr, #contact, #offer{
+	margin-left: 10px;
+	border-top-style: solid;
+	
+}
+#name{
+	margin-left: 10px;
+	padding-top: 10px;
+}
+
+#editName, #editDescr, #editOffer, #editContact{
+	margin-left: 10px;
+}
