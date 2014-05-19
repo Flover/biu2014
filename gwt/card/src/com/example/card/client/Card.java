@@ -39,8 +39,8 @@ public class Card implements EntryPoint {
 				offerLbl.setText(result.getOferta());
 				descrLbl.setText(result.getOpis());
 				contactLbl.setText(result.getAdres());
-				contactLbl.setText(result.getTelefon());
-				contactLbl.setText(result.getMail());
+				contactLbl1.setText(result.getTelefon());
+				contactLbl2.setText(result.getMail());
 				
 			}
 		});
