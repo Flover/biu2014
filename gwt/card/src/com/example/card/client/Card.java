@@ -88,8 +88,8 @@ public class Card implements EntryPoint {
 		RootPanel.get("descrTextBox").add(descrTb);
 		RootPanel.get("offerTextBox").add(offerTb);
 		RootPanel.get("contactTextBox").add(contactTb);
-		RootPanel.get("contactTextBox").add(contactTb1);
-		RootPanel.get("contactTextBox").add(contactTb2);
+		RootPanel.get("contactTextBox1").add(contactTb1);
+		RootPanel.get("contactTextBox2").add(contactTb2);
 		RootPanel.get("saveBtnHolder").add(saveBtn);
 		
 		RootPanel.get("loggedinBox").add(outBtn);
