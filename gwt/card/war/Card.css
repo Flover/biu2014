@@ -4,15 +4,25 @@
 	margin-right: auto;
 }
 
+body{
+	background-color: #424242;
+}
+
 #textHolder, #textEditHolder{
-	margin-left: 40px;
+	
 	width: 400px;
 	height: 500px;
-	border-style: ridge;
+	background-color: white;
 }
-#loginBox, #loggedinBox {
-	position:absolute;
-	left:20px;
+
+#loginBox{
+	color: white;
+	margin-bottom: 20px;
+} 
+
+#nameHolder{
+	background-color: #009900;
+	color: white;
 }
 
 #loginTbHolder, #passwdTbHolder , #sigInBtnHolder {
@@ -32,20 +42,40 @@
 	margin-top: 10px;
 }
 
-#nameHolder, #descrHolder, #offerHolder, #contactHolder, #nameTextBox, #descrTextBox, #offerTextBox, #contactTextBox, #saveBtnHolder{
+#descrHolder, #offerHolder, #contactHolder, #nameTextBox, #descrTextBox, #offerTextBox, #saveBtnHolder{
 	margin-left: 10px;
 }
 
+#nameHolder, #descrHolder, #offerHolder, #contactHolder, #contactHolder1, #contactHolder2{
+	padding: 5px;
+}
+
+#nameHolder{
+	padding-top: 20px;
+	font-size: x-large;
+}
+
 #descr, #contact, #offer{
-	margin-left: 10px;
-	border-top-style: solid;
+	
+	background-color: #c5c5c5;
+	
 	
 }
 #name{
+	margin-right: 10px;
 	margin-left: 10px;
 	padding-top: 10px;
 }
 
 #editName, #editDescr, #editOffer, #editContact{
+	padding: 10px;
+	background-color: #c5c5c5;
+}
+
+
+#contactTextBox, #contactTextBox1, #contactTextBox2, #contactHolder, #contactHolder1, #contactHolder2{
+	display: block;
 	margin-left: 10px;
+	padding-top: 5px;
+	margin-right: 10px;
 }
