@@ -4,16 +4,10 @@
 var myApp = angular.module('myApp.controllers', []);
 
 myApp.controller('kursyCtrl', function ($scope, $http) {
-  $http.get('feed/kurs.json').success(function(data) {
-    $scope.kursy = data;
-  });
-
-  // $scope.orderProp = 'age';
+  setInterval(function() {
+    $http.get('feed/kurs.json').success(function(data) {
+      $scope.kursy = data;
+      console.log('refresh');
+    });
+  },1000);
 });
-
-// angular.module('myApp.controllers', [])
-// 	.controller('kursyCtrl', ['$scope', '$http', function($scope, $http) {
-//   	$http.get('feed/kurs.json').success(function(data) {
-//   		$scope.kursy = data;
-//   	});
-//   }])
